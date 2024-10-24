@@ -3410,86 +3410,86 @@ input, select, textarea {
 		}
 
 /* Intro */
-
-#intro .logo {
-    border-bottom: 0;
-    display: inline-block;
-    margin: 0 0 1em 0;
-    overflow: hidden;
-    position: relative;
-    width: 4em;
-    height: auto; /* Make sure the height adjusts with the image */
+	#intro .logo {
+		border-bottom: 0;
+		display: inline-block;
+		margin: 0 0 1em 0;
+		overflow: hidden;
+		position: relative;
+		width: 10em;
+		height: auto; /* Make sure the height adjusts with the image */
 	}
 
-#intro .logo:before {
-    /* Remove this block entirely to avoid the hexagon shape */
-    /* background-image: none; */
-    /* background-position: none; */
-    /* background-repeat: none; */
-    /* background-size: none; */
-    /* content: none; */
-    /* display: none; */
-    /* height: none; */
-    /* left: none; */
-    /* position: none; */
-    /* top: none; */
-    /* width: none; */
+	#intro .logo:before {
+		/* Remove this block entirely to avoid the hexagon shape */
+		/* background-image: none; */
+		/* background-position: none; */
+		/* background-repeat: none; */
+		/* background-size: none; */
+		/* content: none; */
+		/* display: none; */
+		/* height: none; */
+		/* left: none; */
+		/* position: none; */
+		/* top: none; */
+		/* width: none; */
 	}
 
-#intro .logo img {
-    display: block;
-    margin-left: auto;  /* Center the image if needed */
-    margin-right: auto; /* Center the image if needed */
-    width: 100%;        /* Adjust the image to take up the entire container */
-    height: auto;       /* Maintain aspect ratio */
-}
+	#intro .logo img {
+		display: block;
+		margin-left: auto;  /* Center the image if needed */
+		margin-right: auto; /* Center the image if needed */
+		width: 100%;        /* Adjust the image to take up the entire container */
+		height: auto;       /* Maintain aspect ratio */
+	}
 
-#intro header h2 {
-    font-size: 2em;
-    font-weight: 900;
-}
+	#intro header h2 {
+		font-size: 7%;
+		font-weight: 900;
+	}
 
-#intro header p {
-    font-size: 0.8em;
-}
+	#intro header p {
+		font-size: em;
+	}
 
-@media screen and (max-width: 1280px) {
-    #intro {
-        margin: 0 0 3em 0;
-        text-align: center;
-    }
+	@media screen and (max-width: 1280px) {
+		#intro {
+			margin: 0 0 3em 0;
+			text-align: center;
+		}
 
-    #intro header h2 {
-        font-size: 2em;
-    }
+		#intro header h2 {
+			font-size: 5em;
+		}
 
-    #intro header p {
-        font-size: 0.7em;
-    }
-}
+		#intro header p {
+			font-size: 2em;
+		}
+	}
 
-@media screen and (max-width: 736px) {
-    #intro {
-        margin: 0 0 1.5em 0;
-        padding: 1.25em 0;
-    }
+	@media screen and (max-width: 736px) {
+		#intro {
+			margin: 0 0 1.5em 0;
+			padding: 1.25em 0;
+		}
 
-    #intro > :last-child {
-        margin-bottom: 0;
-    }
+		#intro > :last-child {
+			margin-bottom: 0;
+		}
 
-    #intro .logo {
-        margin: 0 0 0.5em 0;
-    }
+		#intro .logo {
+			margin: 0 0 0.5em 0;
+			width: 8em;
+		}
 
-    #intro header h2 {
-        font-size: 1.25em;
-    }
+		#intro header h2 {
+			font-size: 10em;
+		}
 
-    #intro header > :last-child {
-        margin-bottom: 0;
-    }
-}
+		#intro header > :last-child {
+			margin-bottom: 0;
+		}
+	}
 
 /* Footer */
 
