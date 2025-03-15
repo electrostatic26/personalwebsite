@@ -3,15 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <title>About Us</title>
+  <style>
+    /* Center the image initially and set its position to absolute */
+    #draggable-gif {
+      position: absolute;
+      left: 50%;
+      top: 200px;
+      transform: translateX(-50%);
+      cursor: move; /* change cursor to indicate it's draggable */
+    }
+  </style>
 </head>
 <body>
   <h1>About Us</h1>
   
   <p>Turn audio up</p>
-  
+  <img src="catcute.gif" alt="Descriptive text" id="draggable-gif">
   <!-- Button calls the playFrom function with the desired start time (in seconds) -->
   <button onclick="playFrom(5)">Play Sound</button>
-  
+   
+  <script>
+    const gif = document.getElementById('draggable-gif');
+    let offsetX = 0;
+    let offsetY = 0;
+    let isDragging = false;
+    
+    // When mouse button is pressed down on the image
+    gif.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      // Calculate the offset between the mouse position and the top-left corner of the image
+      offsetX = e.clientX - gif.offsetLeft;
+      offsetY = e.clientY - gif.offsetTop;
+    });
+    
+    // When the mouse button is released anywhere on the document
+    document.addEventListener('mouseup', function() {
+      isDragging = false;
+    });
+    
+    // When the mouse is moved anywhere on the document
+    document.addEventListener('mousemove', function(e) {
+      if (isDragging) {
+        // Update the image's position based on the mouse's current position minus the offset
+        gif.style.left = (e.clientX - offsetX) + 'px';
+        gif.style.top = (e.clientY - offsetY) + 'px';
+      }
+    });
+  </script>
   <!-- Audio element -->
   <audio id="myAudio">
     <source src="audio/nigga.mp3" type="audio/mpeg" />
@@ -25,5 +63,6 @@
       audio.play(); // Play the audio
     }
   </script>
+  
 </body>
 </html>
