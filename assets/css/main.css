@@ -2108,7 +2108,7 @@ input, select, textarea {
 		}
 
 		.select-wrapper select::-ms-expand {
-			display: flex;
+			display: none;
 		}
 
 	select {
@@ -2131,7 +2131,7 @@ input, select, textarea {
 		}
 
 		select::-ms-expand {
-			display: flex;
+			display: none;
 		}
 
 	input[type="text"],
@@ -2262,7 +2262,7 @@ input, select, textarea {
 		}
 
 		.icon > .label {
-			display: flex;
+			display: none;
 		}
 
 		.icon:before {
@@ -2546,7 +2546,7 @@ input, select, textarea {
 			}
 
 				ul.icons li > * .label {
-					display: flex;
+					display: none;
 				}
 
 /* Posts */
@@ -2991,7 +2991,7 @@ input, select, textarea {
 				}
 
 				.post > header .meta .author .name {
-					display: flex;
+					display: none;
 				}
 
 			.post > .image.featured {
@@ -3289,7 +3289,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#header .links {
-				display: flex;
+				display: none;
 			}
 
 		}
@@ -3306,7 +3306,7 @@ input, select, textarea {
 				}
 
 				#header .main .search {
-					display: flex;
+					display: none;
 				}
 
 		}
@@ -3410,85 +3410,85 @@ input, select, textarea {
 		}
 
 /* Intro */
+
 	#intro .logo {
 		border-bottom: 0;
 		display: inline-block;
 		margin: 0 0 1em 0;
 		overflow: hidden;
 		position: relative;
-		width: 10em;
-		height: auto; /* Make sure the height adjusts with the image */
+		width: 4em;
 	}
 
-	#intro .logo:before {
-		/* Remove this block entirely to avoid the hexagon shape */
-		/* background-image: none; */
-		/* background-position: none; */
-		/* background-repeat: none; */
-		/* background-size: none; */
-		/* content: none; */
-		/* display: none; */
-		/* height: none; */
-		/* left: none; */
-		/* position: none; */
-		/* top: none; */
-		/* width: none; */
-	}
+		#intro .logo:before {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' preserveAspectRatio='none' zoomAndPan='disable'%3E%3Cpolygon points='0,0 100,0 100,25 50,0 0,25' style='fill:%23f4f4f4' /%3E%3Cpolygon points='0,100 100,100 100,75 50,100 0,75' style='fill:%23f4f4f4' /%3E%3C/svg%3E");
+			background-position: top left;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
 
-	#intro .logo img {
-		display: block;
-		margin-left: auto;  /* Center the image if needed */
-		margin-right: auto; /* Center the image if needed */
-		width: 100%;        /* Adjust the image to take up the entire container */
-		height: auto;       /* Maintain aspect ratio */
-	}
+		#intro .logo img {
+			display: block;
+			margin-left: -0.25em;
+			width: 4.5em;
+		}
 
 	#intro header h2 {
-		font-size: 7%;
+		font-size: 2em;
 		font-weight: 900;
 	}
 
 	#intro header p {
-		font-size: em;
+		font-size: 0.8em;
 	}
 
 	@media screen and (max-width: 1280px) {
+
 		#intro {
 			margin: 0 0 3em 0;
 			text-align: center;
 		}
 
-		#intro header h2 {
-			font-size: 5em;
-		}
+			#intro header h2 {
+				font-size: 2em;
+			}
 
-		#intro header p {
-			font-size: 2em;
-		}
+			#intro header p {
+				font-size: 0.7em;
+			}
+
 	}
 
 	@media screen and (max-width: 736px) {
+
 		#intro {
 			margin: 0 0 1.5em 0;
 			padding: 1.25em 0;
 		}
 
-		#intro > :last-child {
-			margin-bottom: 0;
-		}
+			#intro > :last-child {
+				margin-bottom: 0;
+			}
 
-		#intro .logo {
-			margin: 0 0 0.5em 0;
-			width: 8em;
-		}
+			#intro .logo {
+				margin: 0 0 0.5em 0;
+			}
 
-		#intro header h2 {
-			font-size: 10em;
-		}
+			#intro header h2 {
+				font-size: 1.25em;
+			}
 
-		#intro header > :last-child {
-			margin-bottom: 0;
-		}
+			#intro header > :last-child {
+				margin-bottom: 0;
+			}
+
 	}
 
 /* Footer */
