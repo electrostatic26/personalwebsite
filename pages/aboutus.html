@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us</title>
+</head>
+<body>
+  <h1>About Us</h1>
+  
+  <p>Turn audio up</p>
+  
+  <!-- Button calls the playFrom function with the desired start time (in seconds) -->
+  <button onclick="playFrom(5)">Play Sound</button>
+  
+  <!-- Audio element -->
+  <audio id="myAudio">
+    <source src="audio/nigga.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    function playFrom(seconds) {
+      var audio = document.getElementById('myAudio');
+      audio.currentTime = seconds; // Set the starting time
+      audio.play(); // Play the audio
+    }
+  </script>
+</body>
+</html>

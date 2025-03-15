@@ -2108,7 +2108,7 @@ input, select, textarea {
 		}
 
 		.select-wrapper select::-ms-expand {
-			display: none;
+			display: flex;
 		}
 
 	select {
@@ -2131,7 +2131,7 @@ input, select, textarea {
 		}
 
 		select::-ms-expand {
-			display: none;
+			display: flex;
 		}
 
 	input[type="text"],
@@ -2262,7 +2262,7 @@ input, select, textarea {
 		}
 
 		.icon > .label {
-			display: none;
+			display: flex;
 		}
 
 		.icon:before {
@@ -2546,7 +2546,7 @@ input, select, textarea {
 			}
 
 				ul.icons li > * .label {
-					display: none;
+					display: flex;
 				}
 
 /* Posts */
@@ -2991,7 +2991,7 @@ input, select, textarea {
 				}
 
 				.post > header .meta .author .name {
-					display: none;
+					display: flex;
 				}
 
 			.post > .image.featured {
@@ -3289,7 +3289,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#header .links {
-				display: none;
+				display: flex;
 			}
 
 		}
@@ -3306,7 +3306,7 @@ input, select, textarea {
 				}
 
 				#header .main .search {
-					display: none;
+					display: flex;
 				}
 
 		}
