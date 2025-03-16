@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Bouncing GIF</title>
+  <style>
+    /* Remove margins and hide any overflow so the GIF doesn't create scrollbars */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    /* Basic styling for the GIF so we can position it absolutely */
+    .bouncy {
+      position: absolute;
+      width: 100px; /* Adjust size as needed */
+      height: auto;
+      cursor: pointer; /* Show a pointer cursor to indicate clickability */
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  /**
+   * Creates a new bouncing GIF on the page.
+   * @param {string} src - The path or URL to the GIF file.
+   */
+  function createBouncingGif(src) {
+    // 1. Create an <img> element and set its source
+    const gif = document.createElement("img");
+    gif.src = src;
+    gif.classList.add("bouncy");
+    document.body.appendChild(gif);
+
+    // 2. Give it a random initial position (within the window bounds)
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 100);
+
+    // 3. Give it a random velocity in both x and y directions
+    let vx = (Math.random() - 0.5) * 6; // Adjust speed as needed
+    let vy = (Math.random() - 0.5) * 6;
+
+    // 4. Animate using requestAnimationFrame
+    function animate() {
+      x += vx;
+      y += vy;
+
+      // Bounce off left/right edges
+      if (x < 0) {
+        x = 0;
+        vx = -vx;
+      } else if (x + gif.width > window.innerWidth) {
+        x = window.innerWidth - gif.width;
+        vx = -vx;
+      }
+
+      // Bounce off top/bottom edges
+      if (y < 0) {
+        y = 0;
+        vy = -vy;
+      } else if (y + gif.height > window.innerHeight) {
+        y = window.innerHeight - gif.height;
+        vy = -vy;
+      }
+
+      // Update the image's position
+      gif.style.left = x + "px";
+      gif.style.top = y + "px";
+
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // 5. When the GIF is clicked, create a duplicate that also bounces
+    gif.addEventListener("click", () => {
+      createBouncingGif(src);
+    });
+  }
+
+  // Create the first bouncing GIF
+  createBouncingGif("catcute.gif");
+</script>
+
+</body>
+</html>
