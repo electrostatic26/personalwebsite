@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Bouncing GIF</title>
+  <title>Bouncing GIF with Sound</title>
   <style>
     /* Remove margins and hide any overflow so the GIF doesn't create scrollbars */
     body {
@@ -22,6 +22,9 @@
 <body>
 
 <script>
+  // Create an Audio object for the click sound
+  const clickSound = new Audio("audio/niggashort.mp3");
+
   /**
    * Creates a new bouncing GIF on the page.
    * @param {string} src - The path or URL to the GIF file.
@@ -72,9 +75,14 @@
     }
     requestAnimationFrame(animate);
 
-    // 5. When the GIF is clicked, create a duplicate that also bounces
+    // 5. When the GIF is clicked, create a duplicate AND play a sound
     gif.addEventListener("click", () => {
+      // Duplicate
       createBouncingGif(src);
+
+      // Restart and play the sound
+      clickSound.currentTime = 0;
+      clickSound.play();
     });
   }
 
